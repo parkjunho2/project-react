@@ -1,0 +1,63 @@
+.room-container {
+    padding: 20px;
+    background-color: white;
+    height: 100vh; 
+    flex: 1; /* 남은 공간을 모두 사용 */
+    overflow-y: auto; /* 스크롤바 추가 */
+}
+
+.room-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.last-message-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    margin-top: 0.2rem; 
+}
+
+.last-message {
+    font-size: 0.8rem; 
+    color: gray; 
+}
+
+.last-message-time {
+    font-size: 0.7rem; 
+    color: darkgray; 
+}
+
+.room-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.room-name {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer; 
+    transition: color 0.3s; 
+}
+
+.room-name:hover {
+    color: #007bff; 
+}
+
+.room-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.room-participants {
+    font-size: 14px;
+    color: #888;
+}
+
+.room-last-message {
+    font-size: 14px;
+    color: #888;
+}
