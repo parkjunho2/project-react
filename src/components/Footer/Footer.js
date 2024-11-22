@@ -22,6 +22,12 @@ import { FaApple } from "react-icons/fa6";
 import { BsWindows } from "react-icons/bs";
 import { SiKakao } from "react-icons/si";
 import './Footer.css'; // CSS 파일 import
+import { FaGitAlt } from "react-icons/fa";
+import { FaDiscord } from "react-icons/fa";
+import { FaAws } from "react-icons/fa";
+import { SiSpringboot } from "react-icons/si";
+import { FaNode } from "react-icons/fa";
+
 
 
 
@@ -70,29 +76,29 @@ const Footer = () => {
                         <NavLink 
                             to="mailto:pp01024689860@gmail.com?subject=문의드립니다. 제목&body=안녕하세요, 문의드립니다." 
                             className="nav-link p-0 upmove-text-hover">
-                            <span className="icon pe-1">
+                            pp01024689860@gmail.com
+                            <span className="icon ps-1">
                                 <IoMdMail /> 
                             </span> 
-                             pp01024689860@gmail.com
                             </NavLink>
                             <NavLink to="https://github.com/parkjunho2/topgun-final.git" className="nav-link p-0 upmove-text-hover">
-                            <span className="icon pe-1">
+                             Back-end Code: Github 
+                            <span className="icon ps-1">
                             <FaGithub /> 
                             </span>
-                             Back-End GitHub
                             </NavLink>
                             <NavLink to="https://github.com/parkjunho2/topgun-react.git" className="nav-link p-0 upmove-text-hover">
-                            <span className="icon pe-1">
+                             Front-End Code: GtiHub                      
+                            <span className="icon ps-1">
                             <FaGithub /> 
                             </span>
-                             Front-End GitHub
                             </NavLink>
-                            <div className="mb-1"><IoCalendarNumber /> 프로젝트 참여기간:10/17-11/6</div>
-                            <div><BsWindows /><FaApple /> 운영체제: Window10 MacOsM3</div>
-                            <div><GrOracle /><SiDbeaver /> DBMS: Oracle11g DBeaver</div>
-                            <div><FaJava /><SiSpring /> Back-End: Java SpringBoot</div>
-                            <div><FaReact /><VscVscode /> Front-End: React VSCode</div>
-                            <div><SiKakao /><FaBootstrap /> Tools: KakaoPay Bootstrap</div>
+                            <div className="mb-1">Join Period: 10/17-11/6  <IoCalendarNumber /></div>
+                            <div>OS: Window10 MacOsM3 <BsWindows /> <FaApple /></div>
+                            <div>DBMS: Oracle11gXE DBeaver <GrOracle />< SiDbeaver /></div>
+                            <div>Back-End: JDK17 SpringBoot <FaJava /> <SiSpring /> <SiSpringboot /></div>
+                            <div>Front-End: React VSCode <FaReact /> <VscVscode /></div>
+                            <div>required Tools: <SiKakao /> <FaBootstrap /> <FaGitAlt /> <FaDiscord /> <FaAws /> <FaNode /></div>
                             <div>
                             
                             </div>
