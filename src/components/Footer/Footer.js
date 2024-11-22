@@ -27,7 +27,8 @@ import { FaDiscord } from "react-icons/fa";
 import { FaAws } from "react-icons/fa";
 import { SiSpringboot } from "react-icons/si";
 import { FaNode } from "react-icons/fa";
-
+import { SiSwagger } from "react-icons/si";
+import { FaUbuntu } from "react-icons/fa";
 
 
 
@@ -98,7 +99,7 @@ const Footer = () => {
                             <div>DBMS: Oracle11gXE DBeaver <GrOracle />< SiDbeaver /></div>
                             <div>Back-End: JDK17 SpringBoot <FaJava /> <SiSpring /> <SiSpringboot /></div>
                             <div>Front-End: React VSCode <FaReact /> <VscVscode /></div>
-                            <div>required Tools: <SiKakao /> <FaBootstrap /> <FaGitAlt /> <FaDiscord /> <FaAws /> <FaNode /></div>
+                            <div>required Tools: <SiKakao /> <FaBootstrap /> <FaGitAlt /> <FaDiscord /> <FaAws /> <FaNode /> <SiSwagger /> <FaUbuntu /></div>
                             <div>
                             
                             </div>
