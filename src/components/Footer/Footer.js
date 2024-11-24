@@ -99,7 +99,7 @@ const Footer = () => {
                             <div>DBMS: Oracle11gXE DBeaver <GrOracle />< SiDbeaver /></div>
                             <div>Back-End: JDK17 SpringBoot <FaJava /> <SiSpring /> <SiSpringboot /></div>
                             <div>Front-End: React VSCode <FaReact /> <VscVscode /></div>
-                            <div>required Tools: <SiKakao /> <FaBootstrap /> <FaGitAlt /> <FaDiscord /> <FaAws /> <FaNode /> <SiSwagger /> <FaUbuntu /></div>
+                            <div>required Tools: <SiKakao /> <FaBootstrap /> <FaGitAlt /> <FaDiscord /> <FaAws /> <FaNode /> <SiSwagger /></div>
                             <div>
                             
                             </div>
