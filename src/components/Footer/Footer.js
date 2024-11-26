@@ -29,6 +29,8 @@ import { SiSpringboot } from "react-icons/si";
 import { FaNode } from "react-icons/fa";
 import { SiSwagger } from "react-icons/si";
 import { FaUbuntu } from "react-icons/fa";
+import { FaDocker } from "react-icons/fa";
+
 
 
 
@@ -64,7 +66,7 @@ const Footer = () => {
                     <div className="col-3 mb-3">
                         <h5 className="ps-3">개발참여자</h5>
                         <ul className="nac flex-column">
-                            <li>박ㅇㅇ : 운영관리, 결제</li>
+                            <li>박준호 : 운영관리, 결제</li>
                             <li>정ㅇㅇ : 문의채팅, CSS</li>
                             <li>김ㅇㅇ : 항공편 CRUD</li>
                             <li>이ㅇㅇ : 통합검색, CSS</li>
@@ -96,10 +98,10 @@ const Footer = () => {
                             </NavLink>
                             <div className="mb-1">Join Period: 10/17-11/6  <IoCalendarNumber /></div>
                             <div>OS: Window10 MacOsM3 <BsWindows /> <FaApple /></div>
-                            <div>DBMS: Oracle11gXE DBeaver <GrOracle />< SiDbeaver /></div>
+                            <div>DBMS: Oracle11gXE DBeaver <GrOracle /> < SiDbeaver /></div>
                             <div>Back-End: JDK17 SpringBoot <FaJava /> <SiSpring /> <SiSpringboot /></div>
                             <div>Front-End: React VSCode <FaReact /> <VscVscode /></div>
-                            <div>required Tools: <SiKakao /> <FaBootstrap /> <FaGitAlt /> <FaDiscord /> <FaAws /> <FaNode /> <SiSwagger /></div>
+                            <div>Required Tools: <SiKakao /> <FaBootstrap /> <FaGitAlt /> <FaDiscord /> <FaAws /> <FaNode /> <SiSwagger /> <FaUbuntu /> <FaDocker /></div>
                             <div>
                             
                             </div>
