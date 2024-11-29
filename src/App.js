@@ -3,7 +3,8 @@ import Header from './components/Header/Header';
 import MainPage from './components/MainPage/MainPage';
 import Login from './components/Login/Login';
 import NotFound from './components/NotFound/NotFound';
-import Test from './components/Test';
+import Exchange from './components/payment/Exchange.js';
+import Weather from './components/payment/Weather.js';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
 import { memberLoadingState, userState } from './util/recoil';
@@ -23,7 +24,6 @@ import AdminFlight from './components/flight/AdminFlight.js';
 import Chat from './components/chat/Chat';
 import Notice from './components/notice/notice.js'; // Notice 컴포넌트 임포트
 import NoticeDetail from './components/notice/noticeDetail.js'; // 공지사항 상세 페이지 컴포넌트 임포트
-import Graph from './components/notice/graph'; // 대문자로 변경
 import MyPage from './components/MyPage/MyPage';
 import Booking from './components/booking/Booking.js';
 import PaymentList from "./components/payment/PaymentList.js";
@@ -39,6 +39,7 @@ import FindPw from './components/ForgotPw/FindPw/FindPw';
 import ResetPw from './components/ForgotPw/ResetPw/ResetPw.js';
 import UserList from './components/UserList/UserList.js';
 import AirLineRoute from './components/Route/AirLineRoute.js';
+import Graph from './components/payment/Graph.js';
 
 
 
@@ -118,17 +119,17 @@ const App = () => {
         <Route path='/findPw' element={<FindPw />} />
         <Route path="/resetPw" element={<ResetPw />} />
 
-        {/* 예약페이지 */}
+        {/* 비로그인 */}
         <Route path="/flight/booking/:flightId" element={<Booking />} />
         <Route path="/flight/bookingList" element={<BookingList />} />
-
+        <Route path="test/exchange" element={<Exchange />} />
+        <Route path="test/weather" element={<Weather />} />
         {/* 로그인 되어야지만 볼 수 있는 페이지 */}
         <Route element={<PrivateRoute />}>
           <Route path="/payment/:flightId" element={<Payment />} />
           <Route path="/payment/:flightId/success/:partnerOrderId" element={<PaymentSuccess />} />
           <Route path="/payment/:flightId/cancel" element={<PaymentCancel />} />
           <Route path="/payment/:flightId/fail" element={<PaymentFail />} />
-          <Route path="/test" element={<Test />} />
           <Route path="/chat" element={<Chat />} />
           <Route path='/mypage' element={<MyPage />} />
           <Route path='/payment/list' element={<PaymentList />} />
@@ -136,7 +137,6 @@ const App = () => {
           <Route path="/chat/:roomNo" element={<Chat />} />
           <Route path="/room" element={<Room />} />
           <Route path='/payment/detail/:paymentNo' element={<PaymentDetail />} />
-          <Route path="/graph" element={<Graph />} />
         </Route>
 
 

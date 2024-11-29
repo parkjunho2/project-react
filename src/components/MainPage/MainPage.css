@@ -146,3 +146,27 @@
   animation: sparkle 1s infinite, move 1s infinite; /* 두 애니메이션 동시에 적용 */
   display: inline-block;
 }
+
+@keyframes upmove {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
+
+.upmove-text-hover {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* 아이콘과 텍스트 간 간격 */
+}
+
+/* 호버 시 아이콘만 애니메이션 */
+.upmove-text-hover:hover .icon {
+  animation: upmove 1s infinite;
+}
+
+.icon {
+  display: inline-block; /* 아이콘에 애니메이션 적용 가능 */
+}

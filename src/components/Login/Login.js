@@ -368,11 +368,12 @@ const Login = () => {
                 <div className="row d-flex justify-content-center align-items-center h-100">
                     <div className="col-md-9 col-lg-6 col-xl-5">
                         {/* 샘플 이미지 나중에 이미지 수정 필요 */}
-                         <NavLink to="/" className="nav-link px-2 text-white">
-                                <img src="/image/1-removebg-preview.png" 
-                                    style={{ width: "400px", height: "auto" }} 
-                                    alt="TopGun Logo" />
-                            </NavLink>
+                        <NavLink to="/" className="nav-link px-2 text-white">
+                        <video className="video" width="600" height="100%" autoplay="true" 
+                            muted loop playsInline>
+                            <source src="/video/flight.mp4" type="video/mp4" />
+                        </video>
+                        </NavLink>
                     </div>
                     <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
                         {/* 소셜 로그인 버튼 */}
@@ -392,7 +393,7 @@ const Login = () => {
                             <p className="text-center fw-bold mx-3 mb-0">Or</p>
                         </div> */}
 
-                        <div className="form-floating form-outline mb-3">
+                        <div className="form-floating form-outline mb-3 upmove-text-hover col-12">
                             <input
                                 name="usersId"
                                 type="text"
@@ -405,11 +406,11 @@ const Login = () => {
                                 required
                             />
                             <label className="form-label" htmlFor="formId">
-                                <MdEmail /> 아이디
+                                <MdEmail className='icon' /> 아이디
                             </label>
                         </div>
 
-                        <div className="form-floating form-outline mb-3">
+                        <div className="form-floating form-outline mb-3 upmove-text-hover col-12">
                             <input
                                 name="usersPw"
                                 type='password'
@@ -420,17 +421,18 @@ const Login = () => {
                                 onChange={InputChange}
                                 onKeyDown={KeyDown}
                                 required
+                                
                             />
                             <label className="form-label" htmlFor="formPassword">
-                                <MdLock /> 비밀번호
+                                <MdLock className='icon'/> 비밀번호
                             </label>
                         </div>
 
                         <div className="d-flex justify-content-between align-items-center mb-3">
-                            <div className="form-check mb-0">
+                            <div className="form-check mb-0 upmove-text-hover">
                                 <input
                                     name="rememberMe"
-                                    className="form-check-input me-2"
+                                    className="form-check-input me-2 icon"
                                     type="checkbox"
                                     id="formRemember"
                                     checked={loginData.rememberMe}

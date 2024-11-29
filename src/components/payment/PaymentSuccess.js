@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams } from 'react-router';
 import { useRecoilValue } from 'recoil';
 import { loginState, memberLoadingState } from "../../util/recoil";
+import { NavLink } from 'react-router-dom';
 const PaymentSuccess=()=>{
         const{flightId} = useParams();
         const navigate = useNavigate();
@@ -135,8 +136,13 @@ const PaymentSuccess=()=>{
         }
         else{
             return(<>
-            <div className="container">
-            <h1 className="text-center mt-5">결제 승인 실패... </h1>
+             <div className="container">
+                <h1 className="text-center mt-5">결제 승인 실패...</h1>
+                <div className="text-end">
+                <button className="btn btn-primary" onClick={handleNavigate}>
+                            예약내역
+                </button>
+                </div>
             </div>
             </>);
         }

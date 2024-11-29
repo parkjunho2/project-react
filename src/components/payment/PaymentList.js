@@ -75,7 +75,7 @@ const PaymentList=()=>{
                                     ))}
                                 </ul>
                             )}
-                            <div className="text-end">
+                          <div className="text-end">
                                 <NavLink to={`/payment/detail/${payment.paymentNo}`}>더보기</NavLink>
                             </div>
                         </li>

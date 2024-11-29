@@ -26,9 +26,9 @@ const Header = () => {
             <header className="p-3 bg-dark text-white">
                 <div className="container">
                     <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                        <span className="d-flex align-items-center mb-lg-0 text-white text-decoration-none fs-4">
+                        <span className="d-flex align-items-center mb-lg-0 text-white text-decoration-none fs-4 upmove-text-hover">
                             <NavLink to="/" className="nav-link px-2 text-white">
-                                <img src="/image/logo.png" alt="TopGun Logo"
+                                <img src="/image/logo.png" alt="TopGun Logo" className="icon"
                                     width={120}
                                     height={35}
                                 />
@@ -123,8 +123,8 @@ const Header = () => {
                                         </button>
                                     </>
                                 ) : (
-                                    <button type="button" onClick={() => navigate("/login")} className="btn me-2 text-white">
-                                        <FaUserCircle className="mb-1" /> 로그인
+                                    <button type="button" onClick={() => navigate("/login")} className="btn me-2 text-white upmove-text-hover">
+                                        <FaUserCircle className="mb-1 icon" /> 로그인
                                     </button>
                                 )
                             )}

@@ -715,9 +715,9 @@ const MainPage = () => {
                             </div>
 
                             <div className="col-sm-3">
-                                <button className="btn btn-primary" style={{ height: "5em" }}
+                                <button className="btn btn-primary upmove-text-hover" style={{ height: "5em" }}
                                     onClick={handleSearch}
-                                    onFocus={handleInputFocus}><FaSearch /> 검색하기
+                                    onFocus={handleInputFocus}><FaSearch className='icon'/> 검색하기
                                 </button>
                             </div>
                         </div>
@@ -926,7 +926,7 @@ const MainPage = () => {
                                     </select>
                                 </div>
                             </div>
-
+                            
                             <div className="card border-0 mb-4 shadow-sm">
                                 <div className="card-body bg-light rounded-3">
                                     <h5 className="card-title">환율 정보</h5>
@@ -977,7 +977,12 @@ const MainPage = () => {
                                     )}
                                 </div>
                             </div>
-
+                            <form className="form d-flex align-items-center" action='https://www.google.com/search'>
+                            <input type="text" name="q" className="form-control w-60" placeholder="구글 통합검색"/>
+                            <button type="submit" className="btn btn-primary ms-2" style={{whiteSpace: 'nowrap'}}>
+                                검색
+                            </button>
+                        </form>
                         </div>
 
                         <div className="col-md-8">
