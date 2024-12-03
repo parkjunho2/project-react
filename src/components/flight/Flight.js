@@ -410,7 +410,7 @@ const Flight = () => {
                 <div className="modal-dialog">
                     <div className="modal-content">
                         <div className="modal-header">
-                            <h5 className="modal-title">{addMode ? '항공편 수정' : '항공편 등록'}</h5>
+                            <h5 className="modal-title">{addMode ? '항공편 등록' : '항공편 수정'}</h5>
                             <button type="button" className="btn-close" onClick={closeModal}></button>
                         </div>
 
