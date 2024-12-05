@@ -32,11 +32,6 @@ const PaymentDetail=()=>{
         loadPaymentInfo();//화면 갱신
     }, []);
 
-    // const cancelPaymentItem = useCallback(async(detail)=>{
-    //     const resp= await axios.delete("/seats/cancelItem/"+detail.paymentDetailNo)
-    //     loadPaymentInfo();//화면 갱신
-    // }, [info]);
-
     const cancelPaymentItem = useCallback(async (detail) => {
         setSelectedDetailName(prev => {
             return [...prev, detail.paymentDetailName];
@@ -45,6 +40,7 @@ const PaymentDetail=()=>{
         toast.success(`${detail.paymentDetailName} 항목이 취소되었습니다.`);
         loadPaymentInfo();
     }, [loadPaymentInfo]);
+
     //한글 변환
     const changeKorean = (type) => {
         switch (type) {
@@ -174,18 +170,10 @@ const PaymentDetail=()=>{
                         <div className="col-3">거래번호</div>
                         <div className="col-9">{info.responseVO.tid}</div>
                     </div>
-                    {/* <div className="row mt-2">
-                        <div className="col-3">가맹점 내부 거래번호</div>
-                        <div className="col-9">{info.responseVO.partner_order_id}</div>
-                    </div> */}
                     <div className="row mt-2">
                         <div className="col-3">거래상태</div>
                         <div className="col-9">{changeKorean(info.responseVO.status)}</div>
                     </div>
-                    {/* <div className="row mt-2">
-                        <div className="col-3">회원아이디</div>
-                        <div className="col-9">{info.responseVO.partner_user_id}</div>
-                        </div> */}
                         <div className="row mt-2">
                             <div className="col-3">결제완료일시</div>
                             <div className="col-9">{formatDate(info.responseVO.approved_at)}</div>
@@ -220,14 +208,6 @@ const PaymentDetail=()=>{
                         <div className="col-9 text-danger">{remainingTime ? `${remainingTime}` : ""}</div>
                         </div>
                     )}
-
-                        {/* {info.responseVO.canceled_amount.total >0 && (
-                    <div className="row mt-2">
-                        <div className="col-3">취소완료금액</div>
-                        <div className="col-9">{info.responseVO.canceled_amount.total.toLocaleString()}원
-                        </div>
-                    </div>
-                        )} */}
                     {info.responseVO.canceled_at !==null &&(
                     <div className="row mt-2">
                         <div className="col-3">결제취소일시</div>

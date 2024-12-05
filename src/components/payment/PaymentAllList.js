@@ -78,7 +78,7 @@ const PaymentAllList=()=>{
         } catch (error) {
             toast.error("여권정보 저장을 실패했습니다.");
         }
-    }, [loadPaymentList, selectedDetail]);
+        }, [loadPaymentList, selectedDetail]);
     
     const isBasicInfoOnly = (payment) => {
         // payment가 undefined가 아닐 때만 접근

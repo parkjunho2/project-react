@@ -42,18 +42,20 @@ const Booking = () => {
         loadSeatsCountList();
     },[]);
 
+
     const loadFlightList = async () => {
         const response = await axios.get(`/flight/${flightId}`);
         // console.log(response.data); // 응답 데이터가 배열인지 확인
         setflightList(Array.isArray(response.data) ? response.data : [response.data]);  // 응답 데이터가 배열인지 확인. 배열이면 그대로 상태에 저장하고, 배열이 아니면 배열로 감싸서 상태에 저장
     };
-    //좌석조회
-    const loadSeatsCountList = async () => {
-      const resp = await axios.get(`/flight/seatsCountList/${flightId}`);
-      console.log(resp);
-      setSeatsCountList(resp.data);
-    };
+  
 
+      //좌석조회
+      const loadSeatsCountList = async () => {
+        const resp = await axios.get(`/flight/seatsCountList/${flightId}`);
+        console.log(resp);
+        setSeatsCountList(resp.data);
+      };
 
     // 첫 번째 모달에 대한 기능
     const openModal = useRef();

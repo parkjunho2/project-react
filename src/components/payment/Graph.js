@@ -21,52 +21,6 @@ const Graph = () => {
         getAirlineData();
     }, []);    
 
-    //항공편별 매축액
-    const getFlightData = useCallback(async () => {
-        try {
-            const response = await axios.get(`/graph/airlinePayment`, {
-                params: { userId: user.userId }
-            });
-            const data = response.data;
-
-            const labels = data.map(item => `비행편 ${item.flightNumber}`);
-            const payments = data.map(item => item.totalPayment);
-
-            if (data.length > 0) {
-                setAirlineName(data[0].airlineName);
-            }
-
-            setFlightData({
-                labels: labels,
-                datasets: [
-                    {
-                        label: '총 결제액',
-                        data: payments,
-                        backgroundColor: 'rgba(54, 162, 235, 0.8)',
-                        borderColor: 'rgba(54, 162, 235, 1)',
-                        borderWidth: 1,
-                        hoverBackgroundColor: 'rgba(54, 162, 235, 1)',
-                        hoverBorderColor: 'rgba(255, 99, 132, 1)',
-                    }
-                ]
-            });
-
-            setFlightPieData({
-                labels: labels,
-                datasets: [
-                    {
-                        label: '결제 분포',
-                        data: payments,
-                        backgroundColor: payments.map((_, index) => `rgba(${index * 30 % 255}, ${100 + index * 30 % 155}, ${200}, 0.6)`),
-                        hoverBackgroundColor: payments.map((_, index) => `rgba(${index * 30 % 255}, ${100 + index * 30 % 155}, ${200}, 1)`),
-                    }
-                ]
-            });
-        } catch (error) {
-            console.error("Error fetching flight chart data:", error);
-        }
-    }, [user.userId]);
-
     //항공사별 매출액
     const getAirlineData = useCallback(async () => {
         try {
@@ -114,6 +68,54 @@ const Graph = () => {
             console.error("Error fetching airline chart data:", error);
         }
     }, []);
+
+    //항공편별 매출액
+    const getFlightData = useCallback(async () => {
+        try {
+            const response = await axios.get(`/graph/airlinePayment`, {
+                params: { userId: user.userId }
+            });
+            const data = response.data;
+
+            const labels = data.map(item => `비행편 ${item.flightNumber}`);
+            const payments = data.map(item => item.totalPayment);
+
+            if (data.length > 0) {
+                setAirlineName(data[0].airlineName);
+            }
+
+            setFlightData({
+                labels: labels,
+                datasets: [
+                    {
+                        label: '총 결제액',
+                        data: payments,
+                        backgroundColor: 'rgba(54, 162, 235, 0.8)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1,
+                        hoverBackgroundColor: 'rgba(54, 162, 235, 1)',
+                        hoverBorderColor: 'rgba(255, 99, 132, 1)',
+                    }
+                ]
+            });
+
+            setFlightPieData({
+                labels: labels,
+                datasets: [
+                    {
+                        label: '결제 분포',
+                        data: payments,
+                        backgroundColor: payments.map((_, index) => `rgba(${index * 30 % 255}, ${100 + index * 30 % 155}, ${200}, 0.6)`),
+                        hoverBackgroundColor: payments.map((_, index) => `rgba(${index * 30 % 255}, ${100 + index * 30 % 155}, ${200}, 1)`),
+                    }
+                ]
+            });
+        } catch (error) {
+            console.error("Error fetching flight chart data:", error);
+        }
+    }, [user.userId]);
+
+    
 
     //항공편 매출액
     const flightOptions = {

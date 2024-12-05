@@ -18,16 +18,18 @@ const FlightDetail = () => {
         flightPassangerList();//탑승자명단 추가
     }, []);
 
+    const flightPassangerList = useCallback(async () => {//탑승자명단 추가
+        const resp = await axios.get(`/seats/passanger/${flightId}`);
+        setFlightPassangerInfo(resp.data); 
+    }, [flightId]);
+
  // `datetime-local` 형식으로 변환하는 함수
  const formatDateForInput = (dateString) => {
     const date = new Date(dateString);
     return date.toISOString().slice(0, 16); // "yyyy-MM-ddTHH:mm" 형식으로 자르기
 };
 
-const flightPassangerList = useCallback(async () => {//탑승자명단 추가
-    const resp = await axios.get(`/seats/passanger/${flightId}`);
-    setFlightPassangerInfo(resp.data); 
-}, [flightId]);
+
 
 const loadFlight = useCallback(async () => {
     try {

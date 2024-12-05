@@ -32,14 +32,12 @@ import { toast } from "react-toastify";
     }, [seatsList]);
 
     //effect
-    //좌석 리스트 callback에 있는거 갖고옴
     useEffect(()=>{
         loadSeatsList();
         loadFlightInfo();
     },[]);
 
     //callback
-    //좌석 리스트 백엔드에 불러옴
     const loadSeatsList= useCallback(async()=>{ 
         const resp=await axios.get(`/seats/${flightId}`);
             setSeatsList(resp.data.map(seats=>{
@@ -68,7 +66,7 @@ import { toast } from "react-toastify";
     //memo 
     //체크된 좌석 목록
     const checkedSeatsList= useMemo(()=>{
-        return seatsList.filter(seats=>seats.select);//filter 원하는것만 추려서 사용하는 명령어
+        return seatsList.filter(seats=>seats.select);
     }, [seatsList]);
 
     // 체크된 비즈니스 좌석 목록
@@ -292,9 +290,9 @@ import { toast } from "react-toastify";
                                         (seat.paymentDetailPassport && !passportRegex.test(seat.paymentDetailPassport))
                                     )
                                 }
-                            >
-                                구매하기
-                            </button>
+                            >구매하기
+                        </button>
+                            
                         <div className="text-center text-primary"><strong>여권 정보는 결제 완료 후에도 입력하실 수 있습니다</strong></div>
 
                         {seatsList.map(seats => (
