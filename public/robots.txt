@@ -1,3 +1,4 @@
 User-agent: *
 Allow:/
 Sitemap: http://topguntravel.shop/sitemap.xml
+Sitemap: http://www.topguntravel.shop/sitemap.xml
