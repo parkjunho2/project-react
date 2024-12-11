@@ -978,7 +978,7 @@ const MainPage = () => {
                                 </div>
                             </div>
                             <form className="form d-flex align-items-center" action='https://www.google.com/search'>
-                            <input type="text" name="q" className="form-control w-60" placeholder="구글 통합검색"/>
+                            <input type="text" name="q" className="form-control w-60" value={"topgun travel agency"}/>
                             <button type="submit" className="btn btn-primary ms-2" style={{whiteSpace: 'nowrap'}}>
                                 검색
                             </button>
