@@ -128,6 +128,7 @@ const NoticeDetail = () => {
                         onChange={(e) => setUpdatedNotice({ ...updatedNotice, noticeTitle: e.target.value })}
                         placeholder="제목을 입력하세요"
                     />
+                    <pre>
                     <ReactQuill
                         ref={quillRef}
                         value={updatedNotice.noticeContent}
@@ -135,6 +136,8 @@ const NoticeDetail = () => {
                         modules={modules}
                         style={styles.quillEditor}
                     />
+
+                    </pre>
 
                     <div style={{ display: 'flex', alignItems: 'center', marginTop: '30px' }}>
                         <div style={{ marginRight: '0px', marginTop: '10px' }}>
@@ -172,13 +175,13 @@ const NoticeDetail = () => {
                     <h4>작성자: {maskUserId(notice.noticeAuthor)}</h4>
                     <p>작성일: {moment(notice.noticeCreatedAt).format("YYYY-MM-DD HH:mm")}</p>
                     <hr style={styles.divider} />
-                    <div style={styles.noticeContent}>
+                    <pre style={styles.noticeContent}>
                         <ReactQuill
                             value={notice.noticeContent}
                             readOnly={true}
                             theme="bubble"
                         />
-                    </div>
+                    </pre>
                 </div>
             )}
             <div style={styles.buttonContainer}>

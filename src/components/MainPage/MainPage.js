@@ -14,6 +14,8 @@ import { toast } from "react-toastify";
 import { IoMdClose } from "react-icons/io";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import 'animate.css';
+import { gsap } from "gsap";
 
 const MainPage = () => {
     const [recentSearches, setRecentSearches] = useState([]); // recentSearches 상태 추가
@@ -616,7 +618,7 @@ const MainPage = () => {
           <div className="modal-dialog" style={{ marginTop: '100px' }}>
             <div className="modal-content">
               <div className="modal-header">
-                <h5 className="modal-title">공지사항</h5>
+                <h5 className="modal-title animate__animated animate__rubberBand">공지사항</h5>
                 <button type="button" className="btn-close" onClick={closeModal} aria-label="Close"></button>
               </div>
               <div className="modal-body">

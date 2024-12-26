@@ -1,4 +1,4 @@
-@charset "UTF-8";
+ @charset "UTF-8";
 *, *:before, *:after {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -252,4 +252,4 @@
   margin: 0 5px; /* 아이템 사이 간격 조정 */
 }
 
-
+ 

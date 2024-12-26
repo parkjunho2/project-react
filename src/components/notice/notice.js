@@ -306,6 +306,7 @@ const NoticeBoard = () => {
                                 </tr>
                                 <tr>
                                     <td colSpan="5">
+                                        <pre>
                                         <ReactQuill
                                             ref={quillRef}
                                             value={input.noticeContent}
@@ -314,6 +315,7 @@ const NoticeBoard = () => {
                                             placeholder="오른쪽 아래 선택자로 에디터 크기를 자유롭게 조절하세요!"
                                             style={{ height: '290px', width: '110%', resize: 'vertical', overflowY: 'auto' }}
                                         />
+                                        </pre>
                                     </td>
                                 </tr>
                                 <tr>
