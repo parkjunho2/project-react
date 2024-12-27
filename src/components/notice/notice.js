@@ -41,6 +41,7 @@ const NoticeBoard = () => {
 
     const login = useRecoilValue(loginState);
     const user = useRecoilValue(userState);
+    const apiUrl = process.env.REACT_APP_BASE_URL;
 
     useEffect(() => {
         loadList();
@@ -48,7 +49,7 @@ const NoticeBoard = () => {
 
     const loadList = useCallback(async () => {
         try {
-            const response = await axios.get("/notice/");
+            const response = await axios.get(`${apiUrl}/notice`);
             // mainNotice가 1인 항목을 우선으로, 긴급 공지 항목을 그 다음으로 정렬
             const sortedList = response.data.sort((a, b) => {
                 if (a.mainNotice === b.mainNotice) {
