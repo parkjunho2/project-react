@@ -30,6 +30,9 @@ import { FaNode } from "react-icons/fa";
 import { SiSwagger } from "react-icons/si";
 import { FaUbuntu } from "react-icons/fa";
 import { FaDocker } from "react-icons/fa";
+import { SiEclipseide } from "react-icons/si";
+import { SiAmazonec2 } from "react-icons/si";
+import { SiNginx } from "react-icons/si";
 
 
 
@@ -66,11 +69,11 @@ const Footer = () => {
                     <div className="col-3 mb-3">
                         <h5 className="ps-3">개발참여자</h5>
                         <ul className="nac flex-column">
-                            <li>박준호 : 운영관리, 결제</li>
-                            <li>정ㅇㅇ : 문의채팅, CSS</li>
+                            <li>박준호 : 결제, Development</li>
+                            <li>정ㅇㅇ : 문의채팅, Publisher</li>
                             <li>김ㅇㅇ : 항공편 CRUD</li>
-                            <li>이ㅇㅇ : 통합검색, CSS</li>
-                            <li>조ㅇㅇ : 회원가입, 로그인</li>
+                            <li>이ㅇㅇ : 통합검색, Publisher</li>
+                            <li>조ㅇㅇ : 회원가입, JWT</li>
                             <li>김ㅇㅇ : 공지사항 CRUD</li>
                         </ul>
                     </div>
@@ -85,7 +88,7 @@ const Footer = () => {
                             </span> 
                             </NavLink>
                             <NavLink to="https://github.com/parkjunho2/topgun-final.git" className="nav-link p-0 upmove-text-hover">
-                             Back-end Code: Github 
+                             Back-End Code: Github 
                             <span className="icon ps-1">
                             <FaGithub /> 
                             </span>
@@ -98,10 +101,11 @@ const Footer = () => {
                             </NavLink>
                             <div className="mb-1">Join Period: 10/17-11/6  <IoCalendarNumber /></div>
                             <div>OS: Window10 MacOsM3 <BsWindows /> <FaApple /></div>
-                            <div>DBMS: Oracle11gXE DBeaver <GrOracle /> < SiDbeaver /></div>
-                            <div>Back-End: JDK17 SpringBoot <FaJava /> <SiSpring /> <SiSpringboot /></div>
-                            <div>Front-End: React VSCode <FaReact /> <VscVscode /></div>
-                            <div>Required Tools: <SiKakao /> <FaBootstrap /> <FaGitAlt /> <FaDiscord /> <FaAws /> <FaNode /> <SiSwagger /> <FaUbuntu /> <FaDocker /></div>
+                            <div>DBMS: Oracle11gXE <GrOracle /> </div>
+                            <div>Langage: JDK17 <FaJava /></div>
+                            <div>IDE: Eclipse Vscode <SiEclipseide /> <VscVscode /></div>
+                            <div>FramWork Library: SpringBoot React <SiSpringboot /> <FaReact /> </div>
+                            <div>ETC Tools: < SiDbeaver /> <SiKakao /> <FaBootstrap /> <FaGitAlt /> <FaDiscord /> <SiAmazonec2 /> <SiNginx /> <FaNode /> <SiSwagger /> <FaUbuntu /> <FaDocker /></div>
                             <div>
                             
                             </div>

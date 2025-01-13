@@ -157,8 +157,9 @@ const PaymentDetail=()=>{
             </div>
         </div>
               ) : (
-                <div className="text-center"><img src="/image/loading.gif"
-                style={{width: "800px", height: "800px" }}></img></div>  // 데이터 로딩 중 표시할 메시지
+                <div className="text-center">
+                    <img src="/image/loading.gif"
+                style={{width: "500px", height: "500px" }}></img></div>  // 데이터 로딩 중 표시할 메시지
             )}
             
         {info ? (  // info가 존재할 경우에만 렌더링
