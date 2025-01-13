@@ -78,7 +78,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className="col-3 mb-3">
-                        <h5>정보</h5>
+                        <h5>Information</h5>
                         <NavLink 
                             to="mailto:pp01024689860@gmail.com?subject=문의드립니다. 제목&body=안녕하세요, 문의드립니다." 
                             className="nav-link p-0 upmove-text-hover">
@@ -112,7 +112,7 @@ const Footer = () => {
 
                     </div>
                     <div className="col-3 mb-3 ps-5">
-                        <h5>참고사이트</h5>
+                        <h5>Reference WebStie</h5>
                         <ul className="nav flex-column">
                             <li className="nav-item mb-2">
                                 <NavLink to="https://www.skyscanner.co.kr/" className="nav-link p-0 text-body-secondary upmove-text-hover">
