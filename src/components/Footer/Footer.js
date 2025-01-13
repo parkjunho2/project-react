@@ -69,7 +69,7 @@ const Footer = () => {
                     <div className="col-3 mb-3">
                         <h5 className="ps-3">Developer</h5>
                         <ul className="nac flex-column">
-                            <li>박준호 : 결제, Deployment</li>
+                            <li>박준호 : 결제, SM, Deployment</li>
                             <li>정ㅇㅇ : 채팅, Publisher</li>
                             <li>김ㅇㅇ : 항공편 CRUD</li>
                             <li>이ㅇㅇ : 통합검색, Publisher</li>
