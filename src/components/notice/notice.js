@@ -50,6 +50,7 @@ const NoticeBoard = () => {
         try {
             const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/notice`);
             // mainNotice가 1인 항목을 우선으로, 긴급 공지 항목을 그 다음으로 정렬
+            console.log(process.env.REACT_APP_BASE_URL);
             const sortedList = response.data.sort((a, b) => {
                 if (a.mainNotice === b.mainNotice) {
                     return b.urgentNotice - a.urgentNotice; // 긴급 공지가 먼저 오도록 정렬
