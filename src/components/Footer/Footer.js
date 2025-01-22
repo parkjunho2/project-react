@@ -57,7 +57,7 @@ const Footer = () => {
             {/* 푸터 */}
                         <div className="container">
                 <footer className="row justify-content-center py-5 my-5 border-top">
-                    <div className="col-3 mb-3">
+                    <div className="col-md-3 mb-3">
                         <div className="d-flex flex-column align-items-start ms-5">
                             <NavLink to="/" className="nav-link px-2 text-white">
                                 <img src="/image/1-removebg-preview.png" 
@@ -66,7 +66,7 @@ const Footer = () => {
                             </NavLink>
                         </div>
                     </div>
-                    <div className="col-3 mb-3">
+                    <div className="col-md-3 mb-3">
                         <h5 className="ps-3">Developer</h5>
                         <ul className="nac flex-column">
                             <li>박준호 : 결제, SM, Deployment</li>
@@ -77,7 +77,7 @@ const Footer = () => {
                             <li>김ㅇㅇ : 공지사항 CRUD</li>
                         </ul>
                     </div>
-                    <div className="col-3 mb-3">
+                    <div className="col-md-3 mb-3">
                         <h5>Information</h5>
                         <NavLink 
                             to="mailto:pp01024689860@gmail.com?subject=문의드립니다. 제목&body=안녕하세요, 문의드립니다." 
