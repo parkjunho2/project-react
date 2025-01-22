@@ -111,7 +111,7 @@ const Footer = () => {
                             </div>
 
                     </div>
-                    <div className="col-3 mb-3 ps-5">
+                    <div className="col-md-3 mb-3">
                         <h5>Reference WebStie</h5>
                         <ul className="nav flex-column">
                             <li className="nav-item mb-2">
