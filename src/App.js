@@ -40,6 +40,7 @@ import ResetPw from './components/ForgotPw/ResetPw/ResetPw.js';
 import UserList from './components/UserList/UserList.js';
 import AirLineRoute from './components/Route/AirLineRoute.js';
 import Graph from './components/payment/Graph.js';
+import Lottery from './components/payment/Lottery.js';
 
 
 
@@ -124,6 +125,7 @@ const App = () => {
         <Route path="/flight/bookingList" element={<BookingList />} />
         <Route path="test/exchange" element={<Exchange />} />
         <Route path="test/weather" element={<Weather />} />
+        <Route path="test/lottery" element={<Lottery/>} />
         {/* 로그인 되어야지만 볼 수 있는 페이지 */}
         <Route element={<PrivateRoute />}>
           <Route path="/payment/:flightId" element={<Payment />} />
