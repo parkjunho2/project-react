@@ -19,6 +19,7 @@ import 'animate.css';
 const MainPage = () => {
     const [recentSearches, setRecentSearches] = useState([]); // recentSearches 상태 추가
     const [isSmallScreen, setIsSmallScreen] = useState(false);
+    const [inputSearch, setInputSearch] = useState(""); // 초기값 설정
 
     const [keyword, setKeyword] = useState('');
     const [open, setOpen] = useState(false);
@@ -119,6 +120,10 @@ const MainPage = () => {
         },
         [input]
     );
+
+    const changeInput = useCallback((e) => {
+        setInputSearch(e.target.value);
+    }, []);
 
     //첫 목록을 불러올 때 사용
     const sendRequest = useCallback(async () => {
@@ -1401,7 +1406,8 @@ const MainPage = () => {
                                     type="text"
                                     name="q"
                                     className="form-control w-60"
-                                    value={'topgun travel agency'}
+                                    value={'topgun travel'}
+                                    onChange={changeInput}
                                 />
                                 <button
                                     type="submit"
