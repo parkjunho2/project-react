@@ -19,7 +19,7 @@ import 'animate.css';
 const MainPage = () => {
     const [recentSearches, setRecentSearches] = useState([]); // recentSearches 상태 추가
     const [isSmallScreen, setIsSmallScreen] = useState(false);
-    const [inputSearch, setInputSearch] = useState(""); // 초기값 설정
+    const [inputSearch, setInputSearch] = useState("topgun travel"); // 초기값 설정
 
     const [keyword, setKeyword] = useState('');
     const [open, setOpen] = useState(false);
@@ -121,9 +121,6 @@ const MainPage = () => {
         [input]
     );
 
-    const changeInput = useCallback((e) => {
-        setInputSearch(e.target.value);
-    }, []);
 
     //첫 목록을 불러올 때 사용
     const sendRequest = useCallback(async () => {
@@ -134,6 +131,10 @@ const MainPage = () => {
         setResult(resp.data);
         loading.current = false; //종료지점
     }, [input]);
+
+    const changeInputSearch = useCallback((e) => {
+        setInputSearch(e.target.value);
+    }, []);
 
     const setFirstPage = useCallback(() => {
         setPage((prev) => null);
@@ -753,7 +754,9 @@ const MainPage = () => {
                                     style={{ height: '5em' }}
                                     placeholder="출발지"
                                     value={input.departureAirport}
-                                    onChange={changeInput}
+                                    onChange={useCallback((e) => {
+                                        setInputSearch(e.target.value);
+                                    }, [])}
                                     onFocus={handleInputFocus} // 다른 입력 필드 클릭 시 숨기기
                                     onClick={DepartureClick}
                                     autoComplete="off"
@@ -768,7 +771,9 @@ const MainPage = () => {
                                     style={{ height: '5em' }}
                                     placeholder="도착지"
                                     value={input.arrivalAirport}
-                                    onChange={changeInput}
+                                    onChange={useCallback((e) => {
+                                        setInputSearch(e.target.value);
+                                    }, [])}
                                     onFocus={handleInputFocus} // 다른 입력 필드 클릭 시 숨기기
                                     onClick={destinationClick}
                                     autoComplete="off"
@@ -1406,8 +1411,10 @@ const MainPage = () => {
                                     type="text"
                                     name="q"
                                     className="form-control w-60"
-                                    value={'topgun travel'}
-                                    onChange={changeInput}
+                                    value={inputSearch}
+                                    onChange={useCallback((e) => {
+                                        setInputSearch(e.target.value);
+                                    }, [])}
                                 />
                                 <button
                                     type="submit"
