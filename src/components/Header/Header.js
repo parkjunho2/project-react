@@ -70,7 +70,7 @@ const Header = () => {
                                 </li>
                                 <li>
                                 <NavLink to="/graph" className="nav-link px-2 text-white">
-                                    데이터차트
+                                    매출내역
                                 </NavLink>
                                 </li>
                             </>
