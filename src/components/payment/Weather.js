@@ -20,7 +20,7 @@ const Weather = () => {
     try {
       const response = await axios.get(url, {
         headers: {
-          // Authorization 헤더를 명시적으로 제거
+          // Authorization 헤더를 명시적으로 제거 2차시도
           Authorization: undefined, // 또는 삭제
         },
       });
