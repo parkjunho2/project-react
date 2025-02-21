@@ -667,7 +667,6 @@ const MainPage = () => {
                     className="modal fade show"
                     tabIndex="-1"
                     style={{ display: 'block' }}
-                    aria-hidden="true"
                 >
                     <div
                         className="modal-dialog"
@@ -1534,27 +1533,9 @@ const MainPage = () => {
                         data-bs-ride="carousel"
                     >
                         <div className="carousel-inner">
+                        
                             <div
                                 className="carousel-item active"
-                                data-bs-interval="3000"
-                            >
-                                <div className="row">
-                                    <div className="col">
-                                        <img
-                                            className="img-fluid"
-                                            src="/image/erd.png"
-                                            alt="ERD"
-                                            style={{
-                                                objectFit: 'contain', // 이미지를 비율 유지하면서 전체 표시
-                                                width: '100%', // 부모 요소의 너비를 꽉 채움
-                                                height: '510px', // 부모 요소의 높이를 꽉 채움
-                                            }}
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                className="carousel-item"
                                 data-bs-interval="6000"
                             >
                                 <div className="row">
@@ -1567,7 +1548,7 @@ const MainPage = () => {
                                                 objectFit: 'cover',
                                                 width: '100%',
                                                 height: '400px',
-                                            }} // 이미지를 꽉 차게, 비율 유지하면서 잘라냄
+                                            }} // 이미지를 꽉 차게, 비율 유지하면서 잘라냄!
                                         />
                                         <h2 className="fw-normal mt-3">도쿄</h2>
                                         <span className="mb-0">

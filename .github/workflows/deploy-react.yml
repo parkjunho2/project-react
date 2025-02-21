@@ -14,10 +14,14 @@ jobs:
               with:
                 host: ${{ secrets.EC2_HOST }}
                 username: ${{ secrets.EC2_USERNAME }}
-                key: ${{ secrets.EC2_PRIVATE_KEY }}
+                key: ${{ secrets.EC2_PRIVATE_KEY }} 
+                #npm run build 
+                #pm2 kill
+                #pm2 start
                 script: |
                     cd /home/ubuntu/.ssh/project-react
                     git pull origin main
-                    npm ci
+
+                    npm ci 
                     lsof -i :3000 || true
                     nohup env NODE_OPTIONS="--max-old-space-size=8192" npm start > ~/react.log 2>&1 &

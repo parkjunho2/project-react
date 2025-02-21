@@ -10,7 +10,6 @@ const Weather = () => {
   const [weatherCodes, setWeatherCodes] = useState([]); // Add weather codes state
   const [dateRange, setDateRange] = useState([null, null]);
   const [currencies, setCurrencies] = useState([]);
-  const [loading, setLoading] = useState(false);
 
   const getWeatherData = useCallback(async () => {
     const latitude = 37.5665;
@@ -70,7 +69,8 @@ const Weather = () => {
   
   useEffect(() => {
       getWeatherData()
-  }, [dateRange, getWeatherData]);
+      getCurrencies()
+  }, [dateRange, getWeatherData, getCurrencies]);
 
   const calculateAverageTemperatures = (weatherData) => {
     const dates = Array.from(new Set(weatherData.time.map(time => moment(time).format('YYYY-MM-DD'))));
