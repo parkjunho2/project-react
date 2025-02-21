@@ -26,8 +26,6 @@ const PaymentAllList=()=>{
          setPaymentList(resp.data);
      }, []);
 
-     
-     
      //여권정보 입력
     const updatePaymentDetail = useCallback(async (paymentDetailNo) => {
         // 입력 값 체크

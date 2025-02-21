@@ -1,0 +1,23 @@
+name: Deploy to ec2
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    Deploy-react:
+        runs-on: ubuntu-latest
+        steps:
+            - name: action을 통해 ec2 접속
+              uses: appleboy/ssh-action@v1.2.1
+              with:
+                host: ${{ secrets.EC2_HOST }}
+                username: ${{ secrets.EC2_USERNAME }}
+                key: ${{ secrets.EC2_PRIVATE_KEY }}
+                script: |
+                    cd /home/ubuntu/.ssh/project-react
+                    git pull origin main
+                    npm ci
+                    lsof -i :3000 || true
+                    nohup env NODE_OPTIONS="--max-old-space-size=8192" npm start > ~/react.log 2>&1 &

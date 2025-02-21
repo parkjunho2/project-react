@@ -69,10 +69,7 @@ const Weather = () => {
 
   
   useEffect(() => {
-    if (dateRange[0] && dateRange[1]) {
-      setLoading(true); // 로딩 시작
-      getWeatherData().finally(() => setLoading(false)); // 데이터 로딩 완료 후 로딩 종료
-    }
+      getWeatherData()
   }, [dateRange, getWeatherData]);
 
   const calculateAverageTemperatures = (weatherData) => {
