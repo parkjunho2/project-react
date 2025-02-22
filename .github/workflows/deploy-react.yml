@@ -18,6 +18,7 @@ jobs:
                 #npm run build 
                 #pm2 kill
                 #pm2 start
+                #npm ci
                 script: |
                     cd /home/ubuntu/.ssh/project-react
                     git pull origin main
