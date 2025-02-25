@@ -9,7 +9,6 @@ import 'react-datepicker/dist/react-datepicker.css'; // 스타일 가져오기
 import './components/Global.css';
 import { RecoilRoot } from 'recoil';
 import { BrowserRouter } from 'react-router-dom';
-//axios customize
 import axios from 'axios';
 
 //axios customize

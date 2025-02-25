@@ -1,6 +1,6 @@
 name: Deploy to ec2
 
-on:
+on: #[push]
     push:
         branches:
             - main
@@ -18,9 +18,9 @@ jobs:
                 #npm run build 
                 #pm2 kill
                 #pm2 start
-                #npm ci
                 script: |
                     cd /home/ubuntu/.ssh/project-react
                     git pull origin main
+                    npm ci
                     lsof -i :3000 || true
                     nohup env NODE_OPTIONS="--max-old-space-size=8192" npm start > ~/react.log 2>&1 &
